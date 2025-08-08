@@ -33,11 +33,12 @@ public class AIServlet extends HttpServlet { // [1]
         Client client = Client.builder()
                 .apiKey(apiKey).build(); // [9]
         // gemini-2.0-flash
-        String data = client.models.generateContent("gemini-2.0-flash",
-                "오늘 저녁 메뉴 추천해줘. 결과만 작성해줘. 마크다운 혹은 꾸미는 문법 없이 평문으로. 100자 이내로 작성해줘.", null)
-                .text(); // text를 불러와줌. [10]
+//        String data = client.models.generateContent("gemini-2.0-flash",
+//                "오늘 저녁 메뉴 추천해줘. 결과만 작성해줘. 마크다운 혹은 꾸미는 문법 없이 평문으로. 100자 이내로 작성해줘.", null)
+//                .text(); // text를 불러와줌. [10]
 //        req.setAttribute("data", "안녕하세요! 반갑습니다!"); // [6]
-        req.setAttribute("data", data); // [11]
+//        req.setAttribute("data", data); // [11]
+        req.setAttribute("data", "저녁 메뉴는 알아서 결정하세요 (농담~)"); // [11]
         req.setAttribute("question", "오늘 저녁 메뉴 추천해줘"); // [question attribute 대응]
         RequestDispatcher dispatcher = req.getRequestDispatcher(
                 "/WEB-INF/ai.jsp");
