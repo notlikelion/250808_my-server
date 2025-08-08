@@ -13,7 +13,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 // [2]
-@WebServlet("/ai") // localhost:8080/ai
+//@WebServlet("/ai") // localhost:8080/ai
+@WebServlet("/") // localhost:8080/
 // 이 서블릿을 통해 호출
 public class AIServlet extends HttpServlet { // [1]
     // doGet, doPost
